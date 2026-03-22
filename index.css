@@ -1,6 +1,15 @@
+/* ================================
+   BASE
+================================ */
+
 body {
     margin: 0;
-} 
+}
+
+
+/* ================================
+   HEADER
+================================ */
 
 header {
     background-image: url("images/header.png");
@@ -20,11 +29,17 @@ header p {
     font-size: 22.42px;
 }
 
+
+/* ================================
+   MENU SECTION
+================================ */
+
 #menu-container {
     padding-top: 67px;
     margin: 0 46px;
 }
 
+/* Each menu item is a flex row: emoji | text | + button */
 .menu-item {
     display: flex;
     align-items: center;
@@ -32,6 +47,7 @@ header p {
     border-bottom: 1px solid #DEDEDE;
 }
 
+/* Text block stacks name, ingredients, price vertically */
 .menu-item .item-text {
     display: flex;
     flex-direction: column;
@@ -58,6 +74,7 @@ header p {
     font-size: 20px;
 }
 
+/* + button pushed to far right using margin-left: auto */
 .menu-item button {
     margin-left: auto;
     width: 50px;
@@ -78,6 +95,11 @@ header p {
     opacity: 0.72;
 }
 
+
+/* ================================
+   ORDER SECTION
+================================ */
+
 #order-container {
     margin: 0 46px;
     padding-top: 45px;
@@ -86,14 +108,15 @@ header p {
 
 #order-container h3 {
     font-size: 28px;
-    margin: 0;
+    margin: 0; /* Reset default browser margin on headings */
 }
 
 #order-container p {
     font-size: 20px;
-    margin: 0;
+    margin: 0; /* Reset default browser margin on paragraphs */
 }
 
+/* Each order item is a flex row: name | remove button | price */
 .order-item {
     display: flex;
     align-items: center;
@@ -101,27 +124,32 @@ header p {
     margin: 0;
 }
 
+/* Price pushed to far right — needs higher specificity to override #order-container p margin: 0 */
 #order-container .order-item .price {
     margin-left: auto;
 }
 
+/* "Your Order" heading centered with space below before items */
 #order-container .order-heading {
     text-align: center;
     margin-bottom: 64px;
 }
 
+/* Total price row with divider line above */
 .total-price {
     display: flex;
     width: 100%;
     border-top: 2px solid #393333;
     padding-top: 14px;
-    margin-top: 31px;
+    margin-top: 31px; /* Space between last order item and divider */
 }
 
+/* Total amount pushed to far right */
 #order-container .total-price p {
     margin-left: auto;
 }
 
+/* Remove button - styled as plain gray text, no button appearance */
 .order-item button {
     font-family: "Verdana";
     font-size: 12px;
@@ -131,6 +159,7 @@ header p {
     cursor: pointer;
 }
 
+/* Complete order button - full width green button */
 .complete-order-btn {
     margin-top: 53px;
     background-color: #16DB99;
@@ -140,28 +169,26 @@ header p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: white;
-    
 }
 
-#payment-modal {
 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+/* ================================
+   PAYMENT MODAL
+================================ */
 
+/* White modal box - hidden by default, centered on screen using fixed positioning */
 .modal-content {
-    display: none;
-    position: fixed;
+    display: none; /* Hidden until "Complete order" is clicked */
+    position: fixed; /* Stays in place on screen regardless of scroll */
     background-color: white;
-    width: calc(100% - 76px);
+    width: calc(100% - 76px); /* 38px margin on each side */
     padding: 47px 24px 30px 24px;
     top: 50%;
     left: 50%;
+    /* Shift back by 50% of own width/height to truly center the element */
     transform: translate(-50%, -50%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Drop shadow matching Figma design values */
     box-shadow: 5.19px 5.19px 255.44px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -173,18 +200,20 @@ header p {
     margin-bottom: 46px;
 }
 
+/* Input fields - stacked vertically, full width */
 .modal-content input {
     display: block;
     width: 100%;
     padding: 14px 27px;
     margin-bottom: 16px;
     border: 1.3px solid #757575;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Padding included in width, prevents overflow */
     font-size: 20px;
     color: #757575;
     border-radius: 3.89px;
 }
 
+/* Pay button - same green style as Complete order button */
 .modal-content button {
     margin-top: 46px;
     background-color: #16DB99;
@@ -195,14 +224,19 @@ header p {
     font-weight: bold;
     font-size: 20px;
     color: white;
-    
 }
 
+
+/* ================================
+   ORDER CONFIRMATION
+================================ */
+
+/* Confirmation message shown after successful payment */
 #order-container .confirmation-msg {
-    background-color: #ECFDF5;
-    color: #065F46;
+    background-color: #ECFDF5; /* Light green background */
+    color: #065F46; /* Dark green text */
     font-family: "Smythe", system-ui;
-    font-size: 32px;
+    font-size: 32px; /* Needs higher specificity to override #order-container p font-size */
     border-radius: 3px;
     padding: 51px 46px;
     text-align: center;

@@ -1,25 +1,36 @@
 <html>
     <head>
+        <!-- Link to our stylesheet -->
         <link rel="stylesheet" href="index.css">
+
+        <!-- Google Fonts preconnect for performance -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Import Smythe (display font) and Source Sans 3 from Google Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Smythe&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Header with restaurant name and tagline -->
         <header>
             <h1>Jimmy's Diner</h1>
             <p>The best burgers and pizzas in town.</p>
         </header>
+
         <main>
+            <!-- Menu items are injected here dynamically by renderMenu() in index.js -->
             <section id="menu-container">
-                <!-- menu items will be injected here by JavaScript -->
             </section>
+
+            <!-- Order summary is injected here dynamically by renderOrder() in index.js -->
             <section id="order-container">
-                <!-- order section will be injected here by JavaScript -->
             </section>
         </main>
+
+        <!-- Payment modal - hidden by default, shown when "Complete order" is clicked -->
         <div class="modal-content">
             <h3>Enter card details</h3>
+            <!-- Form with required fields - browser handles validation automatically -->
             <form id="payment-form">
                 <input type="text" id="name-input" placeholder="Enter your name" required>
                 <input type="text" placeholder="Enter card number" required>
@@ -27,8 +38,9 @@
                 <button type="submit">Pay</button>
             </form>
         </div>
-    <script src="data.js"></script>
-	<script src="index.js"></script>
+
+        <!-- data.js must load before index.js so menuArray is available -->
+        <script src="data.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
-
