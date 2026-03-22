@@ -37,4 +37,4 @@ A restaurant ordering app built with vanilla HTML, CSS and JavaScript as part of
 
 ## Live Demo
 
-[View on Netlify](#) ← replace with your Netlify URL
+[View on Netlify](https://restaurant-ordering-app-pl.netlify.app/)
