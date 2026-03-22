@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+} 
+
+header {
+    background-image: url("images/header.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 46px 46px 70px 46px;
+    font-family: "Smythe", system-ui;
+}
+
+header h1 {
+    margin: 0 0 19px 0;
+    font-size: 39px;
+}
+
+header p {
+    font-size: 22.42px;
+}
+
+#menu-container {
+    padding-top: 67px;
+    margin: 0 46px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 45px 0 51px 0;
+    border-bottom: 1px solid #DEDEDE;
+}
+
+.menu-item .item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+    font-size: 28px;
+}
+
+.menu-item p {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+}
+
+.ingredients {
+    font-size: 16px;
+    color: #8B8B8B;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.menu-item button {
+    margin-left: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid #DEDEDE;
+    background: none;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+    color: #3C3C3C;
+}
+
+.menu-emoji {
+    font-size: 78.72px;
+    margin-right: 31px;
+    opacity: 0.72;
+}
+
+#order-container {
+    margin: 0 46px;
+    padding-top: 45px;
+    font-family: "Smythe", system-ui;
+}
+
+#order-container h3 {
+    font-size: 28px;
+    margin: 0;
+}
+
+#order-container p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    margin: 0;
+}
+
+#order-container .order-item .price {
+    margin-left: auto;
+}
+
+#order-container .order-heading {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.total-price {
+    display: flex;
+    width: 100%;
+    border-top: 2px solid #393333;
+    padding-top: 14px;
+    margin-top: 31px;
+}
+
+#order-container .total-price p {
+    margin-left: auto;
+}
+
+.order-item button {
+    font-family: "Verdana";
+    font-size: 12px;
+    color: #BBBBBB;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.complete-order-btn {
+    margin-top: 53px;
+    background-color: #16DB99;
+    border: none;
+    width: 100%;
+    height: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    
+}
+
+#payment-modal {
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    width: calc(100% - 76px);
+    padding: 47px 24px 30px 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 5.19px 5.19px 255.44px 0 rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 46px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    padding: 14px 27px;
+    margin-bottom: 16px;
+    border: 1.3px solid #757575;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #757575;
+    border-radius: 3.89px;
+}
+
+.modal-content button {
+    margin-top: 46px;
+    background-color: #16DB99;
+    border: none;
+    width: 100%;
+    height: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    
+}
+
+#order-container .confirmation-msg {
+    background-color: #ECFDF5;
+    color: #065F46;
+    font-family: "Smythe", system-ui;
+    font-size: 32px;
+    border-radius: 3px;
+    padding: 51px 46px;
+    text-align: center;
+    margin: 0;
+}
